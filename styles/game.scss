@@ -1,0 +1,35 @@
+.game {
+    height: 100vh;
+    .tablero {
+        display: flex;
+        flex-wrap: wrap;
+        .fila {
+            flex: 1 0 100%;
+            display: flex;
+            .celda {
+                border: 1px solid grey;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                background-color: black;
+                font-size: 0px;
+                color: transparent;
+                transition: all 0.2s ease;
+                &:hover {
+                    background-color: #333;
+                    cursor: pointer;
+                }
+                .content {
+    
+                }
+
+                &.good {
+                    background-color: green;
+                }
+                &.bad {
+                    background-color: red;
+                }
+            }
+        }
+    }
+}
