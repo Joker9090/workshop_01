@@ -8,15 +8,76 @@
 .bkg-grey {
     background-color: grey;
 }
+
 .bkg-beige {
     background-color: beige;
 }
+
 .bkg-green {
     background-color: green;
 }
+
 .bkg-red {
     background-color: red;
 }
+
 .bkg-blue {
     background-color: blue;
+}
+
+.HeaderBar {
+    padding: 10px;
+    background-color: rgb(222, 225, 194);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin-bottom: 0px;
+    }
+
+    .left {
+        .titulo {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+    .right {
+        position: relative;
+    }
+
+    .ProfileMenu {
+        width: 40px;
+        height: 40px;
+        background-color: rgb(187, 187, 226);
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .MenuOptions {
+        position: absolute;
+        width: 200px;
+        right: 0px;
+        text-align: right;
+        background-color: rgb(201, 208, 159);
+        margin-top: 10px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: 0.2s all ease;
+        opacity: 0;
+        .option {
+            transition: all 0.2s ease ;
+            padding: 4px;
+            &:hover {
+                color: white;
+                cursor: pointer;
+                background-color: grey;
+
+            }
+        }
+        &.active {
+            max-height: 200px;
+            opacity: 1;
+        }
+    }
 }
