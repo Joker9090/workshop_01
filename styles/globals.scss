@@ -26,11 +26,15 @@
 }
 
 .HeaderBar {
+    top: 0px;
     padding: 10px;
     background-color: rgb(222, 225, 194);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
 
     p {
         margin-bottom: 0px;
@@ -79,5 +83,93 @@
             max-height: 200px;
             opacity: 1;
         }
+    }
+}
+.push-headerbar {
+    margin-top: 60px;
+}
+.SectionPinterest {
+    overflow-x: hidden;
+    .full-height {
+        min-height: 100vh;
+    }
+    @media screen and (max-width:768px) {
+        .relative{
+            height: 100%;
+        }
+        .centered {
+            height: fit-content;
+        }
+    }
+    .relative {
+        position: relative;
+    }
+    .reversed {
+        flex-direction: row-reverse;
+    }
+    .centered { 
+        justify-content: end;
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 768px) {
+            justify-content: center !important;
+            
+        }
+    }
+    .info-box {
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .description {
+            margin-bottom: 10px;
+        }
+        .cta {
+            margin: auto;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+            width: fit-content;
+            &:hover {
+                background-color: gray;
+                color: black;
+            }
+        }
+    }
+
+    .img-box {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(187, 187, 226);
+        border-radius: 30px;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 200px;
+        left: 0px;
+        margin: auto;
+    }
+    .img-1 {
+        top: -200px;
+        right: -220px;
+        background-color: rgb(187, 187, 226);
+    }
+    .img-3 {
+        top: 220px;
+        right: -220px;
+        background-color:rgb(201, 208, 159);
+        transform: scale(1.5);
+        transform-origin: left top;
+    }
+    .img-4 {
+        width: 300px;
+        height: 200px;
+        top: -420px;
+        right: 300px;
+        background-color: rgb(222, 225, 194);
     }
 }
