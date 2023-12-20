@@ -173,3 +173,15 @@
         background-color: rgb(222, 225, 194);
     }
 }
+
+.pokemon-list {
+    height: 90vh;
+    overflow: auto;
+    .pokemon-list-item {
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover {
+            font-weight: bold;
+        }
+    }
+}
